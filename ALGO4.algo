@@ -1,8 +1,7 @@
 
-BEGIN
     FUNCTION IsPalindromeCheck(str: STRING, start, end: INTEGER): BOOLEAN
     BEGIN
-        /* checking for the length of the woed */
+        /* the case base cheking out if the word is plaindrome or not  */
         IF start >= end THEN
             RETURN TRUE
         END IF
@@ -10,23 +9,25 @@ BEGIN
         IF str[start] <> str[end] THEN
             RETURN FALSE
         END IF
-        /* call the finction iotself for recuresivity */
+        
         RETURN IsPalindromeCheck(str, start + 1, end - 1)
     END
+
+/*the main programe to read the input */
 ALGORITHM IsPalindromeRecursive
     VAR 
     word: STRING
     isPalindrome: BOOLEAN
 
-    /* Read the word */
+    
     WRITE("Enter a word:")
     READ(word)
 
-    /*executing the fuction */ 
+    /* call the function ispalindrome */ 
 
     isPalindrome := IsPalindromeCheck(word, 1, LENGTH(word))
 
-    /* depending from the results  */
+    /* exucting the instrection fo the output if it is plaindrome or not  */
     IF isPalindrome THEN
         WRITE(word, " is a palindrome.")
     ELSE
