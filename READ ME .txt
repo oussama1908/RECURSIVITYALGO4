@@ -1,0 +1,1 @@
+in this exercice i used recresuvity function which called it self to check out if the input is symetric or not see the algo4.algo for more details 
