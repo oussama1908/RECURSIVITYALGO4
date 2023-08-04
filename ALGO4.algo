@@ -25,7 +25,7 @@ ALGORITHM IsPalindromeRecursive
 
     /* call the function ispalindrome */ 
 
-    isPalindrome := IsPalindromeCheck(word, 1, LENGTH(word))
+    isPalindrome := IsPalindromeCheck(word, 0, LENGTH(word)-1)
 
     /* exucting the instrection fo the output if it is plaindrome or not  */
     IF isPalindrome THEN
